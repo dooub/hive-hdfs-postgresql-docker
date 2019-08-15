@@ -6,12 +6,12 @@ ARG HADOOP_VERSION=3.2.0
 ARG HIVE_VERSION=3.1.1
 ARG POSTGRESQL_CONNECTOR_VERSION=42.2.5
 
-RUN wget http://ftp.itu.edu.tr/Mirror/Apache/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz
+RUN wget http://apache.mirror.cdnetworks.com/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz
 RUN mkdir /hadoop
 RUN tar -xvzf hadoop-${HADOOP_VERSION}.tar.gz -C /hadoop --strip-components 1
 RUN rm hadoop-${HADOOP_VERSION}.tar.gz
 
-RUN wget http://ftp.itu.edu.tr/Mirror/Apache/hive/hive-${HIVE_VERSION}/apache-hive-${HIVE_VERSION}-bin.tar.gz
+RUN wget http://apache.mirror.cdnetworks.com/hive/hive-${HIVE_VERSION}/apache-hive-${HIVE_VERSION}-bin.tar.gz
 RUN mkdir /hive
 RUN tar -xvzf apache-hive-${HIVE_VERSION}-bin.tar.gz -C /hive --strip-components 1
 RUN rm apache-hive-${HIVE_VERSION}-bin.tar.gz
