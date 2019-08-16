@@ -9,6 +9,7 @@ ARG POSTGRESQL_CONNECTOR_VERSION=42.2.5
 RUN wget http://apache.mirror.cdnetworks.com/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz
 RUN mkdir /hadoop
 RUN tar -xvzf hadoop-${HADOOP_VERSION}.tar.gz -C /hadoop --strip-components 1
+RUN cp /hadoop/share/hadoop/tools/lib/*aws* /hadoop/share/hadoop/common/lib/
 RUN rm hadoop-${HADOOP_VERSION}.tar.gz
 
 RUN wget http://apache.mirror.cdnetworks.com/hive/hive-${HIVE_VERSION}/apache-hive-${HIVE_VERSION}-bin.tar.gz
